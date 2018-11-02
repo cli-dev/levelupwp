@@ -1,0 +1,61 @@
+.side-menu{
+  @include breakpoint($md){
+    width: 100vw;
+  }
+  .side-menu-inner{
+    @include justify-content(center);
+    @include align-items(center);
+  }
+  .site-logo{
+    display: none;
+  }
+  .menu-container{
+    @include flex(0 1 auto);
+    @include breakpoint($md){
+      padding-top: 40px;
+    }
+  }
+  li{
+    padding: 0;
+    &:last-child:after{
+      display: none;
+    }
+    &:after{
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #fff;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  a{
+    display: block;
+    padding: 5px 0;
+    @include breakpoint($mdl){
+      padding: 10px 0;
+    }
+  }
+  .link-text{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 25px;
+    line-height: 1;
+    @include breakpoint($sml){
+      font-size: 40px;
+    }
+    @include breakpoint($md){
+      font-size: 50px;
+    }
+    @include breakpoint($mdl){
+      font-size: 60px;
+    }
+  }
+}
+.mobile-logo img{
+  width: 60px;
+  @include breakpoint($mdl){width:70px;}
+}

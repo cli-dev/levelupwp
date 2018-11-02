@@ -1,0 +1,35 @@
+
+$base-font-size: 16px;
+
+//breakpoints
+$sml: 360px;
+$mds: 480px;
+$md: 600px;
+$mdl: 800px;
+$lrg: 1100px;
+$xlrg: 1300px;
+$xxlrg: 1600px;
+
+$landscape-phone: (max-width 700px) (max-height 400px) (orientation landscape);
+              
+$grid-width: 1200px;
+
+$dark-blue: #293991;
+$light-blue: #2C98D4;
+$gold: #FBAA19;
+$purple: #4A3594;
+$gray: #818485;
+
+$sans: 'Roboto', sans-serif;
+
+$colors: ('dark-blue', $dark-blue),
+         ('light-blue', $light-blue),
+         ('gold', $gold),
+         ('purple', $purple),
+         ('gray', $gray),
+         ('white', #FFFFFF);
+
+$main-colors: $dark-blue,
+              $light-blue,
+              $gold,
+              $purple;

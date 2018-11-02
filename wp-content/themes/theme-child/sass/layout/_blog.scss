@@ -1,0 +1,232 @@
+.news-feed-inner{
+  @include align-content(flex-start);
+}
+
+// Post Layout
+
+  .post-layout-2{
+    padding: 2.5px 0;
+    @include breakpoint($md){
+      padding: 2.5px;
+    }
+    &.first-post{
+      @include breakpoint($md){
+        width: 100%;
+      }
+      a{
+        background-color: #fff;
+        border: solid 3px $gray;
+        &:hover{
+          border: solid 3px $dark-blue;
+          .featured{
+            color: #FFF;
+          }
+        }
+      }
+      .featured{
+        display: block;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $gray;
+        line-height: 1;
+        letter-spacing: 0.25em;
+        padding-left: 10px;
+        font-size: 25px;
+        @include transition(ease-in-out all 0.2s);
+        @include breakpoint($md){
+          font-size: 35px;
+        }
+        @include breakpoint($xlrg){
+          font-size: 60px;
+          padding-left: 20px;
+        }
+      }
+      h3, .post-date, p{
+        color: $gray;
+      }
+      .post-date{
+        @include breakpoint($md){
+          font-size: 20px;
+        }
+        @include breakpoint($xlrg){
+          font-size: 40px;
+        }
+      }
+      h3{
+        font-size: 18px;
+        @include breakpoint($xlrg){
+          font-size: 34px;
+        }
+      }
+      i{
+        color: $gold;
+        font-size: 40px;
+        @include breakpoint($mdl){
+          font-size: 50px;
+        }
+        @include breakpoint($xlrg){
+          font-size: 100px;
+        }
+      }
+      .post-categories{
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(flex-start);
+      }
+      .post-block-content{
+        @include breakpoint($mdl){
+          max-width: 80%;
+        }
+        @include breakpoint($xlrg){
+          width: 70%;
+        }
+      }
+    }
+    a{
+      background-color: #00a8a2;
+      &:hover{
+        background-color: #291d2d;
+        h3, .post-date, p, i{
+          color: #FFF;
+        }
+      }
+    }
+    .post-block-content{
+      @include justify-content(space-between);
+    }
+    h3, .post-date, p, i{
+      color: #FFF;
+      @include transition(ease-in-out all 0.2s);
+    }
+    .post-block-inner{
+      padding: 15px;
+      @include breakpoint($md){
+        padding: 20px;
+      }
+      @include breakpoint($lrg){
+        padding: 40px;
+      }
+    }
+    h3{
+      letter-spacing: 0.25em;
+      font-size: 14px;
+      @include breakpoint($xxlrg){
+        font-size: 20px;
+      }
+    }
+    .post-meta .post-date{
+      @include breakpoint($xlrg){
+        font-size: 34px;
+      }
+    }
+    i{
+      font-size: 30px;
+      display: block;
+      @include breakpoint($xxlrg){
+        font-size: 70px;
+      }
+    }
+    .featured{
+      display: none;
+    }
+  }
+
+  .post-meta{
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include align-content(flex-start);
+    padding-bottom: 20px;
+    .single-post &{
+      i{
+        color: #00a8a2;
+        font-size: 50px;
+        @include breakpoint($lrg){
+          font-size: 120px;
+        }
+      }
+      .post-categories{
+        border-right-width: 0;
+      }
+      .post-date{
+        @include breakpoint($md){
+          font-size: 24px;
+        }
+        @include breakpoint($lrg){
+          font-size: 40px;
+        }
+      }
+    }
+    .post-date{
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+// Single Post
+.single-post{
+  h1{
+    color:#00a8a2
+  }
+   strong{
+    color:#00a8a2
+  }
+}
+  .single-post .entry-content{
+    position: relative;
+    z-index: 10;
+    padding: 15px;
+    @include breakpoint($md){
+      padding: 40px;
+    }
+    @include breakpoint($mdl){
+      padding: 40px 0;
+    }
+  }
+
+  .single-post .page-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    padding-top: 0 !important;
+    .page-header-inner-wrapper{
+      @include bg-opacity(#00a8a2,0.8);
+    }
+  }
+
+  .post-wrapper{
+    padding: 0;
+    background-color: #FFF;
+    border: solid 3px $gray;
+    @include breakpoint($mdl){
+      
+      position: relative;
+    }
+  }
+
+  .single-post-img{
+    margin-bottom: 0;
+  }
+
+  .post-content{
+    padding: 15px;
+    @include breakpoint($md){
+      padding: 40px;
+    }
+    h1{
+      font-weight: 700;
+    }
+  }
+
+  .post-title{
+    @include display-flex;
+    @include flex-direction(column);
+    h1{
+      @include order(2);
+    }
+  }

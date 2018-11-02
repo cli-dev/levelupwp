@@ -1,0 +1,850 @@
+#wrapper{
+  &.active-menu{
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+// Grid changes
+
+  .flex-row{
+    padding: 20px 10px;
+    @include breakpoint($md){
+      padding: 20px;
+    }
+    @include breakpoint($mdl){
+      padding: 40px 0;
+    }
+    @include breakpoint($xxlrg){
+      padding: 80px 0;
+    }
+  }
+
+// Call to actions rows
+
+  .cta{
+    .flex-row{
+      padding: 0;
+    }
+    .column-1{
+      .col-inner{
+        @include justify-content(center);
+        @include breakpoint($mdl){
+          padding-left: 0;
+        }
+      }
+      h2{
+        padding-bottom: 0;
+        font-size: 22px;
+        @include breakpoint($md){
+          font-size: 26px;
+        }
+        @include breakpoint($lrg){
+          font-size: 30px;
+        }
+        @include breakpoint($xlrg){
+          font-size: 34px;
+        }
+      }
+      h2,p{
+        @include breakpoint($md){
+          text-align: right;
+        }
+      }
+    }
+    .column-2{
+      cursor: pointer;
+      &:before{
+        @include breakpoint($md){
+          content: '+';
+          display: block;
+          width: 50px;
+          font-size: 40px;
+          text-align: center;
+          line-height: 50px;
+          font-weight: 900;
+          color: #FFF;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          @include transform(translate(-50%, -50%));
+        }
+        @include breakpoint($lrg){
+          font-size: 60px;
+        }
+      }
+      &:hover{
+        strong{
+          color: #46324e;
+        }
+      }
+      .col-inner{
+        min-height: 200px;
+        @include align-items(center);
+        @include justify-content(center);
+        @include breakpoint($mdl){
+          @include align-items(flex-start);
+        }
+      }
+      h2{
+        padding-bottom: 0;
+        color: #FFF;
+        @include transition(ease-in-out all 0.2s);
+      }
+      strong{
+        @include transition(ease-in-out all 0.2s);
+      }
+    }
+    .col-inner{
+      padding: 60px 30px;
+      @include breakpoint($md){
+        padding: 80px 40px;
+      }
+      @include breakpoint($lrg){
+        padding: 120px 80px;
+      }
+    }
+  }
+
+// Home page
+
+  // Header nav
+
+    .home-nav{
+      @include breakpoint($md){
+        @include display-flex;
+        @include justify-content(space-between);
+        @include align-items(stretch);
+      }
+    }
+
+    .home-nav-item{
+      @include display-flex;
+      @include breakpoint($md){
+        width: calc(50% - 2.5px);
+      }
+      &:first-child{
+        margin-bottom: 5px;
+        @include breakpoint($md){
+          margin-bottom: 0;
+          position: relative;
+          padding-right: 25px;
+        }
+        &:after{
+          @include breakpoint($md){
+            content: '+';
+            display: block;
+            width: 50px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 900;
+            color: $gold;
+            background-color: #fff;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            right: -2.5px;
+            @include transform(translate(50%, -50%));
+          }
+        }
+        h3,p{
+          @include breakpoint($md){
+            text-align: right;
+          }
+        }
+      }
+      &:last-child{
+        @include breakpoint($md){
+          padding-left: 25px;
+        }
+      }
+      &:hover{
+        // background-color: $gold !important;
+      }
+    }
+
+    .home-nav-item-inner{
+      width: 100%;
+      @include flex(1 1 auto);
+      @include display-flex;
+      @include flex-direction(column);
+      padding: 15px;
+      @include breakpoint($md){
+        padding: 20px;
+      }
+      @include breakpoint($lrg){
+        padding: 40px;
+      }
+    }
+
+    h3.home-nav-title{
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 900;
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+      @include breakpoint($md){
+        font-size: 28px;
+      }
+      @include breakpoint($lrg){
+        font-size: 48px;
+      }
+    }
+
+  // Social Grid
+
+    .home-row-1{
+      .flex-row{
+        padding: 2.5px 5px;
+        @include breakpoint($mdl){
+          padding: 2.5px 0;
+        }
+      }
+      .column-1{
+        padding-top: 2.5px;
+        padding-bottom: 5px;
+        @include breakpoint($md){
+          padding-right: 2.5px;
+          padding-bottom: 2.5px;
+        }
+        @include breakpoint($mdl){
+          width: 50%;
+        }
+        @include breakpoint($lrg){
+          width: 33.333%;
+        }
+        &:hover{
+          .col-inner{
+            background-color: $gold;
+          }
+        }
+        .col-inner{
+          background-color: $dark-blue;
+          @include transition(ease-in-out all 0.2s);
+        }
+        i{
+          font-size: 40px;
+          color: #FFF;
+          padding-bottom: 20px;
+          display: block;
+        }
+        h4{
+          letter-spacing: 0.25em;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #FFF;
+        }
+        #cff{
+          .fa-facebook{
+            font-size: 40px !important;
+          }
+          .cff-shared-link{
+            border: none;
+            background-color: rgba(255,255,255,0.25);
+            @include display-flex;
+            @include align-items(center);
+          }
+          .cff-item{
+            padding: 0;
+          }
+          .cff-link{
+            width: 50px;
+            margin: 0;
+            padding-right: 5px;
+            @include breakpoint($md){
+              width: 70px;
+              padding-right: 10px;
+            }
+          }
+          .cff-post-text{
+            margin: 0;
+            padding-bottom: 20px;
+          }
+          .cff-text-link{
+            padding: 0;
+          }
+          .cff-link-caption,
+          .cff-post-desc{
+            display: none;
+          }
+          .cff-date{
+            margin: 0;
+            font-size: 14px;
+          }
+          .cff-post-links.cff-left{
+            margin: 0;
+          }
+        }
+        .social-icon{
+          display: none;
+          &.facebook{
+            display: block;
+            padding: 0;
+            a{
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 10;
+              cursor: pointer;
+              i{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .column-2{
+        padding-bottom: 5px;
+        @include breakpoint($md){
+          padding-top: 2.5px;
+          padding-left: 2.5px;
+          padding-bottom: 2.5px;
+        }
+        @include breakpoint($mdl){
+          width: 50%;
+        }
+        @include breakpoint($lrg){
+          width: 33.333%;
+          padding-right: 2.5px;
+        }
+        &:hover{
+          .col-inner{
+            background-color: $gold;
+          }
+        }
+        .col-inner{
+          background-color: $purple;
+          @include transition(ease-in-out all 0.2s);
+        }
+        i{
+          font-size: 40px;
+          color: #FFF;
+          padding-bottom: 20px;
+          display: block;
+        }
+        h4{
+          letter-spacing: 0.25em;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #FFF;
+        }
+        .twitter-feed{
+          .timeline-twitter-feed .ttf-timestamp {
+            @include justify-content(flex-start);
+            padding: 0;
+          }
+          .ttf-tweet-text{
+            color: #FFF;
+            text-align: left;
+            padding: 0 0 20px;
+            a{
+              display: none;
+            }
+          }
+        }       
+        .ttf-tweet{
+          padding: 0;
+          @include align-items(flex-start);
+          @include justify-content(flex-start);
+        }
+        .social-icon{
+          display: none;
+          &.twitter{
+            display: block;
+            padding: 0;
+            a{
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 10;
+              cursor: pointer;
+              i{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .column-3{
+        padding-bottom: 2.5px;
+        @include breakpoint($md){
+          padding-top: 2.5px;
+          padding-right: 2.5px;
+        }
+        @include breakpoint($mdl){
+          width: 50%;
+        }
+        @include breakpoint($lrg){
+          width: 33.333%;
+          padding-right: 0;
+          padding-left: 2.5px;
+        }
+        &:hover{
+          .col-inner{
+            background-color: $gold;
+          }
+        }
+        .col-inner{
+          background-color: $light-blue;
+          @include transition(ease-in-out all 0.2s);
+        }
+        i{
+          font-size: 40px;
+          color: #FFF;
+          padding-bottom: 20px;
+          display: block;
+        }
+        h4{
+          letter-spacing: 0.25em;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #FFF;
+        }
+      }
+      .column-4{
+        padding-bottom: 2.5px;
+        @include breakpoint($md){
+          padding-bottom: 0;
+        }
+        @include breakpoint($mdl){
+          width: 50%;
+        }
+        @include breakpoint($lrg){
+          width: 66.667%;
+        }
+        .col-inner{
+          padding: 0;
+        }
+        .col-item{
+          @include flex(1 1 auto);
+          @include display-flex;
+        }
+        .blog-feed-wrapper{
+          @include flex(1 1 auto);
+          @include display-flex;
+          article{
+            @include flex(1 1 auto);
+            @include breakpoint($lrg){
+              padding-left: 0;
+            }
+          }
+        }
+        .post-layout-2.first-post{
+          .featured{
+            @include breakpoint($md){
+              font-size: 28px;
+            }
+          }
+        } 
+      }
+      .column-5{
+        @include breakpoint($md){
+          width: 100%;
+        }
+        @include breakpoint($lrg){
+          width: 33.333%;
+        }
+        .col-inner{
+          padding: 0;
+          @include breakpoint($md){
+            @include flex-direction(row);
+            @include align-items(stretch);
+          }
+          @include breakpoint($lrg){
+            @include flex-direction(column);
+          }
+        }
+        .col-item{
+          @include breakpoint($md){
+            width: 50%;
+          }
+          @include breakpoint($lrg){
+            width: 100%;
+          }
+        }
+        .news-link{
+          @include breakpoint($md){
+            padding-right: 2.5px;
+            padding-bottom: 2.5px;
+            padding-top: 2.5px;
+          }
+          @include breakpoint($lrg){
+            padding-right: 0;
+            padding-left: 2.5px;
+          }
+        }
+        .hover-box{
+          min-height: 200px;
+          .box-title{
+            letter-spacing: 0.25em;
+            font-size: 16px;
+            font-weight: 300;
+            text-transform: uppercase;
+          }
+        }
+        .logo-block{
+          padding: 5px 0 2.5px;
+          @include display-flex;
+          @include justify-content(center);
+          @include align-items(center);
+          @include breakpoint($lrg){
+            padding: 40px;
+          }
+          .logo svg{
+            max-width: 120px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+// About Page
+
+  .about-row-1{
+    h1{
+      font-size: 20px;
+      @include breakpoint($md){
+        font-size: 26px
+      }
+      @include breakpoint($xxlrg){
+        font-size: 34px;
+      }
+    }
+    h3{
+      letter-spacing: 0.1em;
+      font-size: 16px;
+      font-weight: 500;
+      @include breakpoint($lrg){
+        font-size: 18px;
+      }
+      @include breakpoint($xxlrg){
+        font-size: 20px;
+      }
+    }
+  }
+
+  .values{
+    padding-bottom: 30px;
+    @include breakpoint($md){
+      padding-bottom: 40px;
+    }
+    &:last-child{
+      padding-bottom: 0;
+    }
+    h4{
+      text-transform: uppercase;
+      @include breakpoint($xxlrg){
+        font-size: 16px;
+      }
+    }
+  }
+
+  // Team Styling
+
+      .team{
+        padding-top: 30px;
+        @include breakpoint($md){
+          padding-top: 40px;
+        }
+      }
+
+      .team-member-wrapper{
+        @for $i from 1 through length($main-colors)  {
+          &:nth-child(#{length($main-colors)}n+#{$i}){
+            .team-member{
+              background-color: nth($main-colors, $i);
+            }
+            .team-hover-panel{
+              @include bg-opacity(nth($main-colors, $i), 0.7);
+            }
+            .btn:hover{
+              color: nth($main-colors, $i);
+            } 
+          }
+        }
+        .bio-btn{
+          color: #FFF;
+          font-weight: 300;
+          font-size: 16px;
+          letter-spacing: 0.25em;
+          text-transform: uppercase;
+        }
+        h3.team-title{
+          letter-spacing: 0.25em;
+          font-size: 16px;
+          padding-bottom: 0;
+        }
+        .team-position{
+          letter-spacing: 0.25em;
+          font-size: 10px;
+          font-weight: 300;
+        }
+        .team-info{
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+      }
+
+      .team-bio{
+        padding: 0;
+        .team-title{
+          text-transform: uppercase;
+          font-weight: 900;
+          letter-spacing: 0.25em;
+          padding-bottom: 0;
+          font-size: 25px;
+          @include breakpoint($md){
+            font-size: 30px;
+          }
+          @include breakpoint($mdl){
+            font-size: 35px;
+          }
+        }
+        .team-title-wrapper{
+          padding: 15px;
+          @include breakpoint($md){
+            padding: 20px 20px 0;
+            width: 100%;
+          }
+          @include breakpoint($mdl){
+            padding: 40px 40px 0;
+          }
+        }
+        .team-bio-content{
+          @include breakpoint($md){
+            @include display-flex;
+            @include flex-direction(row);
+            @include align-items(flex-end);
+          }
+        }
+        .bio{
+          padding: 15px;
+          @include breakpoint($md){
+            padding: 20px;
+          }
+          @include breakpoint($mdl){
+            padding: 40px;
+          }
+        }
+        .team-position{
+          font-weight: 300;
+          font-size: 14px;
+          letter-spacing: 0.25em;
+          text-transform: uppercase;
+        }
+        .team-member-img{
+          font-size: 0;
+          line-height: 0;
+          width: 100%;
+          @include breakpoint($md){
+            min-width: 200px;
+          }
+        }
+        img{
+          margin-bottom: 0;
+          @include breakpoint($md){
+            float: none;
+            max-width: 200px;
+            margin: 0;
+          }
+        }
+      }
+
+// Approach Page
+
+  .approach-row-1{
+    .column-1{
+      h3{
+        padding-top: 20px;
+        padding-bottom: 0;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        @include breakpoint($lrg){
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .approach-col{
+    .col-inner{
+      @include breakpoint($lrg){
+        padding: 20px;
+      }
+    }
+    h4,p{
+      text-align: center;
+    }
+    h4{
+      text-transform: uppercase;
+      @include breakpoint($xlrg){
+        font-size: 20px;
+      }
+    }
+    i{
+      font-size: 60px;
+      display: block;
+    }
+  }
+
+// Careers Page
+
+  .careers-row-1{
+    .column-1{
+      .col-inner{
+        padding: 30px;
+        @include breakpoint($md){
+          padding: 20px;
+        }
+        @include breakpoint($mdl){
+          padding: 20px 20px 20px 0;
+        }
+        @include breakpoint($lrg){
+          padding: 80px 40px 80px 0;
+        }
+        @include breakpoint($xxlrg){
+          padding: 120px 80px 120px 0;
+        }
+      }
+      h4{
+        padding-top: 30px;
+        padding-bottom: 0;
+        font-size: 16px;
+        @include breakpoint($md){
+          font-size: 18px;
+        }
+        @include breakpoint($lrg){
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .accordion.careers{
+    .accordion-tab{
+      padding-bottom: 5px;
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+    .accordion-tab-title{
+      padding: 15px 30px;
+      @include display-flex;
+      @include justify-content(space-between);
+      @include align-items(center);
+      @include breakpoint($md){
+        padding: 15px 20px;
+      }
+      @include breakpoint($lrg){
+        padding: 40px;
+      }
+    }
+    .accordion-tab-title-content p{
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+    }
+    .accordion-content-inner{
+      padding: 30px;
+      @include breakpoint($md){
+        padding: 20px;
+      }
+      @include breakpoint($lrg){
+        padding: 40px;
+      }
+    }
+  }
+  .light-blue-bg{
+    background-color:#00a8a2;
+  }
+  .dark-blue-bg{
+    background-color:#46324e;
+  }
+  .home-nav-item:first-child:after{
+    color:#00a8a2;
+  }
+.home-nave-itm::hover{
+   background-color:#46324e;
+}
+  .home-nav-item:last-child::hover{
+    background-color:#00a8a2;
+  }
+.cta .column-2 strong{
+  color:#fff;
+}
+.cta .column-2 strong:hover{
+  color:#46324e;
+}
+.about-page .page-header .header-block:before {
+  
+    background:rgba(0,168,162,0.8);
+}
+.pilanthropy-page .page-header .header-block:before {
+  
+    background:rgba(0,168,162,0.8);
+}
+// .cta .column-2 .col-inner{
+//   background:rgba(0,168,162,0.8);
+// }
+.cta .column-2:before{
+  z-index: 9999;
+}
+.cta .column-2:hover a{
+  color: #46324e;
+}
+.careers-page .page-header .header-block{
+  background-color:rgba(70,50,78,.8);
+}
+.approach-page .page-header .header-block:before{
+   background-color:rgba(70,50,78,.8);
+}
+.philanthropy-page .page-header .header-block:before{
+ background:rgba(0,168,162,0.2);}
+ .blog .page-header .header-block:before{
+ background:rgba(0,168,162,0.2);}
+.philanthropy-col{
+  padding:20px;
+  @include breakpoint($mds){padding:40px;}
+  @include breakpoint($mdl){padding:120px;}
+}
+.philanthropy-img{
+  padding:120px;
+  @include breakpoint($sml){padding:100px;}
+  @include breakpoint($mdl){padding:0px;}
+}
+#side-menu.menu-container, .menu-mobile-container, .sub-nav{
+  background-color:#00a8a2;
+}
+.about-side{
+    background-size: cover;
+    position: absolute;
+    width: 41%;
+    height: 56%;
+    left: 0px;
+    bottom: 0px;
+    display: none;
+    @include breakpoint($mdl){display: inherit;}
+}
+.large-img{
+  width:100%;
+}
+#top-footer .social-icon a{
+  color:#00a8a2;
+}
+.no-padding-bottom{
+  padding-bottom:0px !important;
+}
+.careers-image{
+position: relative;bottom:0px;
+}

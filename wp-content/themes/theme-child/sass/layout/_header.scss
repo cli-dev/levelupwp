@@ -1,0 +1,378 @@
+// Site Header
+
+  .mobile-logo{
+    max-width: 30px;
+    margin: 0 auto;
+    @include breakpoint($md){
+      margin: 0;
+    }
+  }
+
+  .header-widgets-inner{
+    @include breakpoint($mdl){
+      width: 100%;
+      max-width: none;
+      padding: 20px 40px;
+    }
+  }
+
+  .menu-button-area{
+    @include breakpoint($mdl){
+      right: 40px;
+    }
+  }
+
+// Page Header
+
+  .page-header{
+    .home &{
+      padding-top: 0 !important;
+      min-height: 100vh;
+      .page-header-inner{
+        padding: 0 5px;
+        @include breakpoint($mdl){
+          padding: 0;
+        }
+      }
+      .header-block{
+        width: 100%;
+        &.block-1{
+          @include flex(1 1 auto);
+          @include display-flex;
+          @include justify-content(center);
+          @include align-items(center);
+        }
+      }
+    }
+    .about-page &{
+      overflow: hidden;
+      padding-top: 0 !important;
+      .page-header-inner{
+        padding: 0;
+      }
+      .header-block{
+        padding: 80px 100px 80px 30px;
+        position: relative;
+        width: 100%;
+        @include breakpoint($md){
+          padding: 120px 140px 120px 40px;
+        }
+        @include breakpoint($mdl){
+          padding: 120px 40px 120px 0;
+        }
+        @include breakpoint($lrg){
+          padding: 160px 80px 160px 0;
+        }
+        @include breakpoint($xlrg){
+          padding: 200px 80px 200px 0;
+        }
+        &:before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 80px;
+          @include bg-opacity($dark-blue, 0.8);
+          @include breakpoint($md){
+            // right: 110px;
+          }
+          @include breakpoint($mdl){
+            // width: 100vw;
+            // right: 80px;
+          }
+        }
+        h2,p{
+          position: relative;
+          z-index: 5;
+        }
+      }
+    }
+    .approach-page &{
+      overflow: hidden;
+      padding-top: 0 !important;
+      .page-header-inner{
+        padding: 0;
+      }
+      .header-block{
+        padding: 80px 100px 80px 30px;
+        position: relative;
+        width: 100%;
+        @include breakpoint($md){
+          padding: 120px 150px 120px 40px;
+        }
+        @include breakpoint($mdl){
+          padding: 120px 120px 120px 0;
+        }
+        @include breakpoint($lrg){
+          padding: 160px 160px 160px 0;
+        }
+        @include breakpoint($xlrg){
+          padding: 200px 160px 200px 0;
+        }
+        &:before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          // right: 80px;
+          @include bg-opacity($light-blue, 0.8);
+          @include breakpoint($md){
+            // right: 110px;
+          }
+          @include breakpoint($mdl){
+            // width: 100vw;
+            // right: 80px;
+          }
+        }
+        h2,p{
+          position: relative;
+          z-index: 5;
+          @include breakpoint($md){
+            text-align: right;
+          }
+        }
+      }
+    }
+     .philanthropy-page &{
+      overflow: hidden;
+      padding-top: 0 !important;
+      .page-header-inner{
+        padding: 0;
+      }
+      .header-block{
+        padding: 80px 100px 80px 30px;
+        position: relative;
+        width: 100%;
+        @include breakpoint($md){
+          padding: 120px 150px 120px 40px;
+        }
+        @include breakpoint($mdl){
+          padding: 120px 120px 120px 0;
+        }
+        @include breakpoint($lrg){
+          padding: 160px 160px 160px 0;
+        }
+        @include breakpoint($xlrg){
+    background:rgba(0,168,162,0.8);
+        }
+        &:before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          // right: 80px;
+          @include bg-opacity($light-blue, 0.8);
+          @include breakpoint($md){
+            // right: 110px;
+          }
+          @include breakpoint($mdl){
+            // width: 100vw;
+            // right: 80px;
+          }
+        }
+        h2,p{
+          position: relative;
+          z-index: 5;
+          @include breakpoint($md){
+            text-align: right;
+          }
+        }
+      }
+    }
+    .careers-page &{
+      padding-top: 0 !important;
+      .page-header-inner{
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .header-block{
+        width: 100%;
+        padding: 80px 15px;
+        @include bg-opacity($gold, 0.8);
+        @include breakpoint($md){
+          padding: 120px 40px;
+        }
+        @include breakpoint($mdl){
+          padding: 160px 40px;
+        }
+        @include breakpoint($lrg){
+          padding: 160px 80px;
+        }
+        @include breakpoint($xlrg){
+          padding: 200px 80px;
+        }
+      }
+    }
+      .blog &{
+      padding-top: 0 !important;
+      .page-header-inner{
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .header-block{
+        width: 100%;
+        padding: 80px 15px;
+        background:rgba(0,168,162,0.8);
+        @include breakpoint($md){
+          padding: 120px 40px;
+        }
+        @include breakpoint($mdl){
+          padding: 160px 40px;
+        }
+        @include breakpoint($lrg){
+          padding: 160px 80px;
+        }
+        @include breakpoint($xlrg){
+          padding: 200px 80px;
+        }
+      }
+    }
+  //   
+  //   .blog &{
+  //     overflow: hidden;
+  //     @include breakpoint($md){
+  //       padding-top: 0 !important;
+  //     }
+  //     .page-header-inner{
+  //       @include breakpoint($md){
+  //         padding: 0;
+  //       }
+  //     }
+  //     .header-block{
+  //       padding: 15px;
+  //       position: relative;
+  //       @include breakpoint($md){
+  //         width: calc(50% - 5px);
+  //         padding: 20px;
+  //       }
+  //       @include breakpoint($mdl){
+  //         padding: 40px;
+  //       }
+  //       @include breakpoint($xlrg){
+  //         padding: 120px 80px;
+  //       }
+  //       &.block-1{
+  //         margin-bottom: 5px;
+  //         @include breakpoint($md){
+  //           padding-left: 40px;
+  //           margin-bottom: 0;
+  //         }
+  //         @include breakpoint($mdl){
+  //           padding-left: 0;
+  //         }
+  //         &:before{
+  //           @include bg-opacity($purple, 0.8);
+  //           right: 0;
+  //         }
+  //       }
+  //       &.block-2{
+  //         @include breakpoint($md){
+  //           padding-right: 40px;
+  //         }
+  //         @include breakpoint($mdl){
+  //           padding-right: 0;
+  //         }
+  //         &:before{
+  //           @include bg-opacity($dark-blue, 0.8);
+  //           left: 0;
+  //         }
+  //         h1{
+  //           strong{
+  //             @include breakpoint($xlrg){
+  //               font-size: 60px;
+  //             }
+  //           }
+  //         }
+  //         p{
+  //           @include breakpoint($xlrg){
+  //             font-size: 14px;
+  //           }
+  //         }
+  //       }
+  //       &:before{
+  //         content: '';
+  //         display: block;
+  //         width: 100%;
+  //         height: 100%;
+  //         position: absolute;
+  //         top: 0;
+  //         @include breakpoint($mdl){
+  //           width: 50vw;
+  //         }
+  //       }
+  //       h1,h2,p{
+  //         position: relative;
+  //         z-index: 5;
+  //       }
+  //     }
+  //   }
+  //   h1,h2{
+  //     color: #FFF;
+  //   }
+  //   p{
+  //     color: #FFF;
+  //   }
+  }
+
+  .header-block{
+    h1,h2{
+      padding-top:20px;
+      @include breakpoint($mds){
+        font-size: 18px;
+      }
+      @include breakpoint($md){
+        font-size: 20px;
+      }
+      @include breakpoint($mdl){
+        font-size: 24px;
+      }
+      @include breakpoint($lrg){
+        font-size: 28px;
+      }
+      @include breakpoint($xlrg){
+        font-size: 32px;
+      }
+      strong{
+        font-size: 28px;
+        letter-spacing: 0.3em;
+        @include breakpoint($sml){
+          font-size: 30px;
+        }
+        @include breakpoint($mds){
+          font-size: 40px;
+        }
+        @include breakpoint($md){
+          font-size: 50px;
+        }
+        @include breakpoint($mdl){
+          font-size: 60px;
+        }
+        @include breakpoint($lrg){
+          font-size: 70px;
+        }
+        @include breakpoint($xlrg){
+          font-size: 72px;
+        }
+      }
+    }
+    p{
+      letter-spacing: 0.1em;
+      @include breakpoint($xlrg){
+        font-size: 20px;
+      }
+    }
+  }
+.home-nav-item:hover {
+    background-color:#46324e;
+}
+.home-nav-item:last-child {
+    &:hover{
+background-color: #00a8a2;
+    }
+}
